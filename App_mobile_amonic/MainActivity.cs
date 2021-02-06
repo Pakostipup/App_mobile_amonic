@@ -22,6 +22,7 @@ namespace App_mobile_amonic
            
             Button btnAoa = FindViewById<Button>(Resource.Id.About_our_airline);
             Button btnAmenities = FindViewById<Button>(Resource.Id.button3);
+            Button btnRS = FindViewById<Button>(Resource.Id.Reserve_Seat);
 
 
             btnAoa.Click += (sender, e) =>
@@ -33,6 +34,12 @@ namespace App_mobile_amonic
             btnAmenities.Click += (sender, e) =>
             {
                 var intent = new Intent(this, typeof(AmenitiesActivity));
+                StartActivity(intent);
+            };
+
+            btnRS.Click += (sender, e) =>
+            {
+                var intent = new Intent(this, typeof(ReserveSeat));
                 StartActivity(intent);
             };
 
